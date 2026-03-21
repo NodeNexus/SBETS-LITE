@@ -1,8 +1,11 @@
-﻿{
+{
   "name": "sbets-lite",
   "version": "1.0.0",
   "description": "SBETS-LITE – Smart Expense Tracking System backend API",
   "main": "server.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
