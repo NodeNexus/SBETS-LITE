@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SBETS-LITE &ndash; Smart Expense Tracking. Track your UPI expenses instantly via SMS detection, smart categories, and real-time analytics." />
+  <title>SBETS-LITE &ndash; Smart Expense Tracking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon">S</div>
+        <span>SBETS-LITE</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#how-it-works" class="nav-link">How it Works</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#demo" class="nav-link">Live Demo</a></li>
+        <li><a href="#privacy" class="nav-link">Privacy</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#demo" class="btn btn-primary nav-cta">Try Demo</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge"><span class="badge-dot"></span>SMS-Powered Intelligence</div>
+        <h1 class="hero-title">Track your UPI expenses<br /><span class="gradient-text">instantly &amp; intelligently</span></h1>
+        <p class="hero-subtitle">SBETS-LITE reads your bank SMS notifications to automatically categorize spending, visualize patterns, and keep you in control &mdash; all without sharing your data.</p>
+        <div class="hero-cta">
+          <a href="#demo" class="btn btn-primary btn-lg" id="tryDemoBtn">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+            Try Demo
+          </a>
+          <a href="#features" class="btn btn-outline btn-lg">View Features &rarr;</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item"><span class="stat-number">0ms</span><span class="stat-label">Server Latency</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label">On-Device</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat-item"><span class="stat-number">&infin;</span><span class="stat-label">Categories</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="phone-mockup">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <div class="phone-status-bar"><span>9:41</span><span>&#9679;&#9679;&#9679;</span></div>
+              <div class="phone-notification">
+                <div class="notif-icon">&#127974;</div>
+                <div class="notif-content">
+                  <div class="notif-title">HDFC Bank</div>
+                  <div class="notif-body">&#8377;210 debited via UPI to Uber</div>
+                  <div class="notif-time">Just now</div>
+                </div>
+              </div>
+              <div class="popup-overlay">
+                <div class="category-popup">
+                  <div class="popup-header">
+                    <div class="popup-amount">&#8377;210</div>
+                    <div class="popup-merchant">Uber</div>
+                    <div class="popup-suggestion">&#129504; Suggested: Transport</div>
+                  </div>
+                  <div class="popup-categories">
+                    <button class="cat-btn active">&#128663; Transport</button>
+                    <button class="cat-btn">&#127829; Food</button>
+                    <button class="cat-btn">&#128717; Shopping</button>
+                    <button class="cat-btn">&#128138; Health</button>
+                    <button class="cat-btn">&#127916; Entertainment</button>
+                    <button class="cat-btn">&#128230; Other</button>
+                  </div>
+                  <button class="popup-confirm-btn">Confirm Category</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="phone-glow"></div>
+        </div>
+        <div class="floating-card card-1"><div class="fc-icon">&#9989;</div><div class="fc-text"><span>Categorized!</span><small>Transport &middot; &#8377;210</small></div></div>
+        <div class="floating-card card-2"><div class="fc-icon">&#128202;</div><div class="fc-text"><span>Dashboard updated</span><small>Real-time sync</small></div></div>
+        <div class="floating-card card-3"><div class="fc-icon">&#128274;</div><div class="fc-text"><span>100% Private</span><small>Local storage only</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works section" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Process</div>
+        <h2 class="section-title">How SBETS-LITE Works</h2>
+        <p class="section-subtitle">Five simple steps from payment to insight &mdash; fully automated</p>
+      </div>
+      <div class="steps-flow">
+        <div class="step-card"><div class="step-number">01</div><div class="step-icon">&#128179;</div><h3>Make UPI Payment</h3><p>Pay anyone with UPI as you normally would &mdash; Google Pay, PhonePe, BHIM.</p></div>
+        <div class="step-arrow">&rarr;</div>
+        <div class="step-card"><div class="step-number">02</div><div class="step-icon">&#128233;</div><h3>Bank Sends SMS</h3><p>Your bank instantly sends a debit notification SMS confirming the transaction.</p></div>
+        <div class="step-arrow">&rarr;</div>
+        <div class="step-card"><div class="step-number">03</div><div class="step-icon">&#129302;</div><h3>SBETS-LITE Detects It</h3><p>SBETS-LITE reads the SMS, extracts amount, merchant and transaction type instantly.</p></div>
+        <div class="step-arrow">&rarr;</div>
+        <div class="step-card"><div class="step-number">04</div><div class="step-icon">&#127991;</div><h3>Category Popup</h3><p>A smart popup appears with a suggested category based on the merchant name.</p></div>
+        <div class="step-arrow">&rarr;</div>
+        <div class="step-card"><div class="step-number">05</div><div class="step-icon">&#128200;</div><h3>Dashboard Updates</h3><p>Your spending analytics and budgets update automatically in real-time.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Features</div>
+        <h2 class="section-title">Everything You Need</h2>
+        <p class="section-subtitle">Powerful features for effortless expense management</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon-wrap"><div class="feature-icon">&#128225;</div></div><h3>Automatic SMS Detection</h3><p>Reads bank SMS in the background and triggers categorization instantly without any manual input.</p><div class="feature-tag">Core Feature</div></div>
+        <div class="feature-card featured"><div class="feature-badge-top">&#11088; Most Used</div><div class="feature-icon-wrap"><div class="feature-icon">&#9889;</div></div><h3>Instant Category Popup</h3><p>A beautiful popup appears the moment a transaction is detected, letting you tag it in seconds.</p><div class="feature-tag">UX Magic</div></div>
+        <div class="feature-card"><div class="feature-icon-wrap"><div class="feature-icon">&#129504;</div></div><h3>Smart Suggestions</h3><p>Merchant name intelligence suggests the right category &mdash; Uber &rarr; Transport, Swiggy &rarr; Food.</p><div class="feature-tag">AI Powered</div></div>
+        <div class="feature-card"><div class="feature-icon-wrap"><div class="feature-icon">&#128202;</div></div><h3>Real-time Analytics</h3><p>Live pie charts, bar graphs and spending trends update automatically each time you log an expense.</p><div class="feature-tag">Insights</div></div>
+        <div class="feature-card"><div class="feature-icon-wrap"><div class="feature-icon">&#128274;</div></div><h3>Privacy-First Design</h3><p>Every byte of your data stays on your device. No logins, no cloud uploads, no third party access.</p><div class="feature-tag">Security</div></div>
+        <div class="feature-card"><div class="feature-icon-wrap"><div class="feature-icon">&#128276;</div></div><h3>Budget Alerts</h3><p>Set monthly limits per category and receive alerts when you're close to or over budget.</p><div class="feature-tag">Budgeting</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE DEMO DASHBOARD -->
+  <section class="demo-section section" id="demo">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Interactive</div>
+        <h2 class="section-title">Live Demo Dashboard</h2>
+        <p class="section-subtitle">Add demo transactions and see the dashboard update in real-time</p>
+      </div>
+      <div class="demo-wrapper">
+        <div class="demo-sidebar">
+          <div class="demo-logo">&#128241; SBETS-LITE</div>
+          <nav class="demo-nav">
+            <button class="demo-nav-item active" data-tab="overview">&#128202; Overview</button>
+            <button class="demo-nav-item" data-tab="transactions">&#128203; Transactions</button>
+            <button class="demo-nav-item" data-tab="analytics">&#128200; Analytics</button>
+          </nav>
+          <button class="demo-add-btn" id="addTransactionBtn">+ Add Demo Transaction</button>
+        </div>
+        <div class="demo-main">
+          <!-- Overview Tab -->
+          <div class="demo-tab active" id="tabContentOverview">
+            <div class="demo-kpi-row">
+              <div class="kpi-card"><div class="kpi-label">Monthly Spending</div><div class="kpi-value" id="totalSpend">&#8377;12,450</div><div class="kpi-change negative">&uarr; 8% vs last month</div></div>
+              <div class="kpi-card"><div class="kpi-label">Transactions</div><div class="kpi-value" id="totalTxns">34</div><div class="kpi-change positive">&uarr; 3 new today</div></div>
+              <div class="kpi-card"><div class="kpi-label">Top Category</div><div class="kpi-value" id="topCat">&#127829; Food</div><div class="kpi-change">&#8377;3,800 spent</div></div>
+              <div class="kpi-card"><div class="kpi-label">Budget Status</div><div class="kpi-value" id="budgetStatus">78%</div><div class="kpi-change negative">Alert: Near limit</div></div>
+            </div>
+            <div class="demo-charts-row">
+              <div class="chart-card"><div class="chart-title">Spending by Category</div><div class="chart-container"><canvas id="pieChart"></canvas></div></div>
+              <div class="chart-card"><div class="chart-title">Category Breakdown</div><div class="category-bars" id="categoryBars"></div></div>
+            </div>
+            <div class="recent-txns-card">
+              <div class="card-header-row"><div class="chart-title">Recent Transactions</div><button class="see-all-btn" id="seeAllBtn">See All &rarr;</button></div>
+              <div class="txn-list" id="recentTxns"></div>
+            </div>
+          </div>
+          <!-- Transactions Tab -->
+          <div class="demo-tab" id="tabContentTransactions">
+            <div class="txn-search-bar">
+              <input type="text" id="txnSearch" placeholder="Search transactions..." class="txn-search-input" />
+              <select id="txnFilter" class="txn-filter-select">
+                <option value="">All Categories</option>
+                <option value="Food">&#127829; Food</option>
+                <option value="Transport">&#128663; Transport</option>
+                <option value="Shopping">&#128717; Shopping</option>
+                <option value="Health">&#128138; Health</option>
+                <option value="Entertainment">&#127916; Entertainment</option>
+                <option value="Other">&#128230; Other</option>
+              </select>
+            </div>
+            <div class="txn-full-list" id="fullTxnList"></div>
+          </div>
+          <!-- Analytics Tab -->
+          <div class="demo-tab" id="tabContentAnalytics">
+            <div class="analytics-grid">
+              <div class="chart-card full-width"><div class="chart-title">Daily Spending (Last 7 Days)</div><div class="chart-container tall"><canvas id="lineChart"></canvas></div></div>
+              <div class="chart-card full-width"><div class="chart-title">Monthly Budget Progress</div><div class="budget-progress-list" id="budgetProgressList"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADD TRANSACTION MODAL -->
+  <div class="modal-overlay" id="txnModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>&#128233; Simulated SMS Received</h3>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+      <div class="sms-preview">
+        <div class="sms-bubble">Your A/c XX1234 debited &#8377;<span id="smsAmount">0</span> on <span id="smsDate">--</span> via UPI to <span id="smsMerchant">--</span>. Avl Bal: &#8377;45,231.</div>
+      </div>
+      <div class="modal-body">
+        <div class="form-group"><label>Amount (&#8377;)</label><input type="number" id="txnAmount" placeholder="e.g. 350" class="form-input" /></div>
+        <div class="form-group"><label>Merchant</label><input type="text" id="txnMerchant" placeholder="e.g. Swiggy, Uber, Amazon" class="form-input" /></div>
+        <div class="modal-suggestion" id="modalSuggestion" style="display:none">&#129504; Suggested: <strong id="suggestionText"></strong></div>
+        <div class="form-group"><label>Category</label>
+          <div class="modal-categories" id="modalCategories">
+            <button class="cat-btn" data-cat="Food">&#127829; Food</button>
+            <button class="cat-btn" data-cat="Transport">&#128663; Transport</button>
+            <button class="cat-btn" data-cat="Shopping">&#128717; Shopping</button>
+            <button class="cat-btn" data-cat="Health">&#128138; Health</button>
+            <button class="cat-btn" data-cat="Entertainment">&#127916; Entertainment</button>
+            <button class="cat-btn" data-cat="Other">&#128230; Other</button>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-full" id="confirmTxnBtn">Confirm &amp; Add</button>
+    </div>
+  </div>
+
+  <!-- SMART SUGGESTIONS -->
+  <section class="suggestions-section section" id="suggestions">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">AI Intelligence</div>
+        <h2 class="section-title">Smart Category Suggestions</h2>
+        <p class="section-subtitle">SBETS-LITE understands merchant names and pre-selects the right category for you</p>
+      </div>
+      <div class="suggestions-showcase">
+        <div class="suggestion-examples">
+          <div class="sugg-example"><div class="sugg-sms"><div class="sugg-sms-icon">&#128233;</div><div class="sugg-sms-text">&#8377;210 paid to <strong>Uber</strong> via UPI</div></div><div class="sugg-arrow">&rarr;</div><div class="sugg-result"><div class="sugg-chip">&#128663; Transport</div><div class="sugg-conf">98% confident</div></div></div>
+          <div class="sugg-example"><div class="sugg-sms"><div class="sugg-sms-icon">&#128233;</div><div class="sugg-sms-text">&#8377;450 paid to <strong>Swiggy</strong> via UPI</div></div><div class="sugg-arrow">&rarr;</div><div class="sugg-result"><div class="sugg-chip">&#127829; Food</div><div class="sugg-conf">99% confident</div></div></div>
+          <div class="sugg-example"><div class="sugg-sms"><div class="sugg-sms-icon">&#128233;</div><div class="sugg-sms-text">&#8377;1200 paid to <strong>Amazon</strong> via UPI</div></div><div class="sugg-arrow">&rarr;</div><div class="sugg-result"><div class="sugg-chip">&#128717; Shopping</div><div class="sugg-conf">97% confident</div></div></div>
+          <div class="sugg-example"><div class="sugg-sms"><div class="sugg-sms-icon">&#128233;</div><div class="sugg-sms-text">&#8377;650 paid to <strong>Apollo Pharmacy</strong> via UPI</div></div><div class="sugg-arrow">&rarr;</div><div class="sugg-result"><div class="sugg-chip">&#128138; Health</div><div class="sugg-conf">96% confident</div></div></div>
+          <div class="sugg-example"><div class="sugg-sms"><div class="sugg-sms-icon">&#128233;</div><div class="sugg-sms-text">&#8377;399 paid to <strong>Netflix</strong> via UPI</div></div><div class="sugg-arrow">&rarr;</div><div class="sugg-result"><div class="sugg-chip">&#127916; Entertainment</div><div class="sugg-conf">100% confident</div></div></div>
+        </div>
+        <div class="ai-highlight-card">
+          <div class="ai-glow-icon">&#129504;</div>
+          <h3>Merchant Intelligence Engine</h3>
+          <p>SBETS-LITE maintains a smart merchant-to-category map. Pattern matching on merchant names ensures you almost never need to manually tag a transaction.</p>
+          <ul class="ai-features-list">
+            <li>&#9989; 200+ pre-mapped merchants</li>
+            <li>&#9989; Learns from your corrections</li>
+            <li>&#9989; Partial name matching</li>
+            <li>&#9989; Case-insensitive detection</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY -->
+  <section class="privacy-section section" id="privacy">
+    <div class="container">
+      <div class="privacy-grid">
+        <div class="privacy-content">
+          <div class="section-badge">Privacy First</div>
+          <h2 class="section-title left">Your Data Never Leaves Your Device</h2>
+          <p class="section-subtitle left">We built SBETS-LITE with a non-negotiable principle: your financial data is yours alone.</p>
+          <div class="privacy-points">
+            <div class="privacy-point"><div class="pp-icon">&#128683;</div><div><h4>No Bank Login Required</h4><p>We never ask for your credentials. SBETS-LITE works purely from SMS your bank already sends.</p></div></div>
+            <div class="privacy-point"><div class="pp-icon">&#128245;</div><div><h4>No SMS Stored on Servers</h4><p>Your messages are read locally, parsed on-device, and immediately discarded &mdash; never transmitted.</p></div></div>
+            <div class="privacy-point"><div class="pp-icon">&#128190;</div><div><h4>Local Storage Only</h4><p>All transaction data is saved in local device storage. Uninstall and it&rsquo;s gone completely.</p></div></div>
+            <div class="privacy-point"><div class="pp-icon">&#128272;</div><div><h4>Open Source</h4><p>Anyone can audit the code on GitHub to verify our privacy claims. Zero hidden endpoints.</p></div></div>
+          </div>
+        </div>
+        <div class="privacy-visual">
+          <div class="privacy-shield">
+            <div class="shield-outer"><div class="shield-inner"><div class="shield-core">&#128737;</div></div></div>
+            <div class="shield-orbits">
+              <div class="orbit-item o1">&#128274;</div>
+              <div class="orbit-item o2">&#128241;</div>
+              <div class="orbit-item o3">&#128683;</div>
+            </div>
+          </div>
+          <div class="privacy-cert"><div class="cert-icon">&#9989;</div><div><strong>Zero-Server Architecture</strong><small>All processing done locally on your phone</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APP SCREENS CAROUSEL -->
+  <section class="screens-section section" id="screens">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">App Preview</div>
+        <h2 class="section-title">Designed for Simplicity</h2>
+        <p class="section-subtitle">Every screen is crafted for speed and clarity</p>
+      </div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide active">
+            <div class="screen-mockup">
+              <div class="screen-header"><span class="screen-dot r"></span><span class="screen-dot y"></span><span class="screen-dot g"></span><span class="screen-name">Category Popup</span></div>
+              <div class="screen-body">
+                <div class="demo-notification"><div>&#127974; HDFC Bank</div><div style="font-size:12px;opacity:0.7">&#8377;350 debited to Zomato via UPI</div></div>
+                <div class="demo-popup-card">
+                  <div style="font-size:24px;font-weight:800;color:#6366f1">&#8377;350</div>
+                  <div style="opacity:0.7;font-size:13px">Zomato &middot; UPI</div>
+                  <div class="sug-badge">&#129504; Suggested: Food</div>
+                  <div class="demo-cats"><span class="dc active">&#127829; Food</span><span class="dc">&#128663; Transport</span><span class="dc">&#128717; Shopping</span><span class="dc">&#128138; Health</span></div>
+                  <div class="demo-confirm-btn">&#10003; Confirm</div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-label"><h4>Instant Category Popup</h4><p>Appears the moment a transaction SMS is detected</p></div>
+          </div>
+          <div class="carousel-slide">
+            <div class="screen-mockup">
+              <div class="screen-header"><span class="screen-dot r"></span><span class="screen-dot y"></span><span class="screen-dot g"></span><span class="screen-name">Dashboard</span></div>
+              <div class="screen-body">
+                <div class="db-header"><span>March 2026</span><span style="font-size:12px;opacity:0.6">34 Transactions</span></div>
+                <div class="db-total">&#8377;12,450</div>
+                <div class="db-cats-mini">
+                  <div class="db-cat-row"><span>&#127829; Food</span><span>&#8377;3,800</span></div>
+                  <div class="db-cat-row"><span>&#128663; Transport</span><span>&#8377;2,100</span></div>
+                  <div class="db-cat-row"><span>&#128717; Shopping</span><span>&#8377;3,200</span></div>
+                  <div class="db-cat-row"><span>&#128138; Health</span><span>&#8377;900</span></div>
+                </div>
+                <div class="db-mini-bar"><div class="db-bar-fill" style="width:78%"></div></div>
+                <div style="font-size:11px;opacity:0.6;margin-top:4px">78% of &#8377;16,000 budget used</div>
+              </div>
+            </div>
+            <div class="slide-label"><h4>Clean Dashboard Overview</h4><p>Monthly spending summary at a glance</p></div>
+          </div>
+          <div class="carousel-slide">
+            <div class="screen-mockup">
+              <div class="screen-header"><span class="screen-dot r"></span><span class="screen-dot y"></span><span class="screen-dot g"></span><span class="screen-name">Analytics</span></div>
+              <div class="screen-body">
+                <div class="db-header" style="margin-bottom:12px"><span>Spending Trends</span></div>
+                <div class="mini-chart">
+                  <div class="mini-bar-group">
+                    <div class="mini-bar" style="height:40%"></div>
+                    <div class="mini-bar" style="height:65%"></div>
+                    <div class="mini-bar" style="height:45%"></div>
+                    <div class="mini-bar" style="height:80%"></div>
+                    <div class="mini-bar" style="height:55%"></div>
+                    <div class="mini-bar" style="height:70%"></div>
+                    <div class="mini-bar active" style="height:90%"></div>
+                  </div>
+                  <div class="mini-bar-labels"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+                </div>
+                <div style="margin-top:12px;font-size:12px;opacity:0.7">Weekly peak: Sunday &#8377;2,100</div>
+                <div class="insight-chip">&#128161; You spend 30% more on weekends</div>
+              </div>
+            </div>
+            <div class="slide-label"><h4>Visual Analytics</h4><p>Spot trends and patterns in your spending</p></div>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="prevSlide">&#8249;</button>
+          <div class="carousel-dots" id="carouselDots">
+            <span class="cdot active"></span><span class="cdot"></span><span class="cdot"></span>
+          </div>
+          <button class="carousel-btn" id="nextSlide">&#8250;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo"><div class="logo-icon">S</div><span>SBETS-LITE</span></div>
+          <p class="footer-desc">Smart Expense Tracking System &mdash; Built to help students and individuals manage UPI spending effortlessly through SMS intelligence.</p>
+          <a href="https://github.com/NodeNexus/SBETS-LITE" target="_blank" rel="noopener" class="social-btn github-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            View on GitHub
+          </a>
+        </div>
+        <div class="footer-links-group"><h4>Product</h4><ul><li><a href="#how-it-works">How it Works</a></li><li><a href="#features">Features</a></li><li><a href="#demo">Live Demo</a></li><li><a href="#suggestions">Smart Suggestions</a></li></ul></div>
+        <div class="footer-links-group"><h4>About</h4><ul><li><a href="#privacy">Privacy</a></li><li><a href="#screens">App Screens</a></li><li><a href="https://github.com/NodeNexus/SBETS-LITE" target="_blank">Open Source</a></li><li><a href="#contact">Contact</a></li></ul></div>
+        <div class="footer-contact-group">
+          <h4>Project Info</h4>
+          <div class="project-info-card">
+            <div class="pi-row"><span class="pi-label">Project</span><span>SBETS-LITE &ndash; Smart Expense Tracking</span></div>
+            <div class="pi-row"><span class="pi-label">Team</span><span>NodeNexus</span></div>
+            <div class="pi-row"><span class="pi-label">Stack</span><span>Node.js &middot; Express &middot; JSON DB</span></div>
+            <div class="pi-row"><span class="pi-label">GitHub</span><a href="https://github.com/NodeNexus/SBETS-LITE" target="_blank" style="color:#6366f1">NodeNexus/SBETS-LITE</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SBETS-LITE &ndash; Smart Expense Tracking System. Built with &#10084;&#65039; by NodeNexus.</p>
+        <p class="footer-note">All financial data processed locally. No server storage.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

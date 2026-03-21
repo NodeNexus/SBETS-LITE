@@ -1,0 +1,4 @@
+node_modules/
+sbets-data.json
+*.log
+.env
